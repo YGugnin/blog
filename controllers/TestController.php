@@ -7,7 +7,7 @@ use yii\web\Controller;
 
 class TestController extends Controller{
     public function actionCreate(){
-        $service_url = 'http://blog.loc/api?access-token=7184807479ea2d012d4baca9b1154d99';
+        $service_url = 'http://blog.electrobeat.org/api?access-token=7184807479ea2d012d4baca9b1154d99';
         $curl = curl_init($service_url);
         $curl_post_data = [
             'title' => 'Test Post ('.date("Y-m-d H:i:s").')',
@@ -29,7 +29,7 @@ class TestController extends Controller{
     }
 
     public function actionUpdate(){
-        $service_url = 'http://blog.loc/api/22?access-token=7184807479ea2d012d4baca9b1154d99';
+        $service_url = 'http://blog.electrobeat.org/api/22?access-token=7184807479ea2d012d4baca9b1154d99';
         $curl = curl_init($service_url);
         $curl_post_data = [
             'title' => 'changed Post ('.date("Y-m-d H:i:s").')',
@@ -51,7 +51,7 @@ class TestController extends Controller{
     }
 
     public function actionDelete(){
-        $service_url = 'http://blog.loc/api/5?access-token=7184807479ea2d012d4baca9b1154d99';
+        $service_url = 'http://blog.electrobeat.org/api/5?access-token=7184807479ea2d012d4baca9b1154d99';
         $curl = curl_init($service_url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
@@ -67,7 +67,7 @@ class TestController extends Controller{
         die();
     }
     public function actionGet(){
-        $service_url = 'http://blog.loc/api?expand=user';
+        $service_url = 'http://blog.electrobeat.org/api?expand=user';
         $curl = curl_init($service_url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $curl_response = curl_exec($curl);

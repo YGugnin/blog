@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\user;
+use app\models\User;
 
 /**
  * userSearch represents the model behind the search form about `app\models\user`.
  */
-class userSearch extends user
+class userSearch extends User
 {
     /**
      * @inheritdoc

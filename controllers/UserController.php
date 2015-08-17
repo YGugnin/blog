@@ -3,7 +3,7 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\user;
+use app\models\User;
 use app\models\userSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -82,7 +82,7 @@ class UserController extends Controller
      */
     public function actionRegistration()
     {
-        $model = new user();
+        $model = new User();
         $model->access_token = md5(strrev(Yii::$app->request->post('User')['email']) . Yii::$app->params['salt']);
 
         if ($model->load(array_merge(Yii::$app->request->post())) && $model->save()) {
