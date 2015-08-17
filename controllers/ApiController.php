@@ -5,7 +5,6 @@ namespace app\controllers;
 use Yii;
 use yii\rest\ActiveController;
 use yii\filters\auth\QueryParamAuth;
-use yii\web\Response;
 use app\models\PostSearch;
 use app\models\Post;
 use yii\web\UnauthorizedHttpException;
